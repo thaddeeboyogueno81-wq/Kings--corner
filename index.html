@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Permet au site d'être adapté aux téléphones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kings' Corner | Restaurant à Emana - Yaoundé</title>
+
+    <meta name="description"
+        content="Kings' Corner, restaurant situé à Emana, Yaoundé. Découvrez notre cuisine, notre ambiance et nos spécialités.">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/svg+xml">   
+    <!--
+        =====================================================
+        GOOGLE FONTS
+        =====================================================
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Forum&display=swap"
+        rel="stylesheet">
+
+    <!--
+        =====================================================
+        ICÔNES IONICONS
+        =====================================================
+    -->
+    <script type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+
+    <script nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+
+    <!-- Notre CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body id="top">
+
+
+    <!-- =====================================================
+         PRELOADER
+         ===================================================== -->
+
+    <div class="preloader" data-preloader>
+
+        <div class="loader-circle"></div>
+
+        <p>KINGS' CORNER</p>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         BARRE SUPÉRIEURE
+         ===================================================== -->
+
+    <div class="topbar">
+
+        <div class="container topbar-container">
+
+            <div class="topbar-item">
+
+                <ion-icon name="location-outline"></ion-icon>
+
+                <span>
+                    Emana, Yaoundé - Cameroun
+                </span>
+
+            </div>
+
+
+            <div class="topbar-separator"></div>
+
+
+            <div class="topbar-item">
+
+                <ion-icon name="time-outline"></ion-icon>
+
+                <span>
+                    Ouvert tous les jours
+                </span>
+
+            </div>
+
+
+            <div class="topbar-separator"></div>
+
+
+            <a href="tel:+237670281726" class="topbar-item">
+
+                <ion-icon name="call-outline"></ion-icon>
+
+                <span>
+                    +237 670 281 726
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER / NAVIGATION
+         ===================================================== -->
+
+    <header class="header" data-header>
+
+        <div class="container header-container">
+
+
+            <!-- LOGO -->
+
+            <a href="#home" class="logo">
+
+                <!--
+                    =================================================
+                    SI TU AS LE LOGO KINGS CORNER :
+
+                    Remplace le texte ci-dessous par :
+
+                    <img src="images/logo.png" alt="Kings Corner">
+
+                    =================================================
+                -->
+                <img src="images/logo.jpg" alt="Kings Corner" style="width: 80px; height: 80px; border-radius: 40px;"><br>
+                <span class="logo-kings">KINGS'</span>
+                <span class="logo-corner">CORNER</span>
+
+            </a>
+
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="navbar" data-navbar>
+
+                <button class="close-menu" data-nav-toggler>
+
+                    <ion-icon name="close-outline"></ion-icon>
+
+                </button>
+
+
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="#home" class="navbar-link active">
+                            Accueil
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="navbar-link">
+                            À propos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#menu" class="navbar-link">
+                            Notre menu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#gallery" class="navbar-link">
+                            Galerie
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#reservation" class="navbar-link">
+                            Réservation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="navbar-link">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <!-- Informations affichées dans le menu mobile -->
+
+                <div class="mobile-info">
+
+                    <p>Emana, Yaoundé</p>
+
+                    <p>Ouvert : 08h00 - 02h00</p>
+
+                    <a href="tel:+237670281726">
+                        +237 670 281 726
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+
+            <!-- BOUTON RÉSERVER -->
+
+            <a href="#reservation" class="btn btn-gold desktop-booking">
+                Réserver une table
+            </a>
+
+
+
+            <!-- MENU MOBILE -->
+
+            <button class="menu-toggle" data-nav-toggler>
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- OVERLAY -->
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+
+        <!-- =====================================================
+             HERO / SLIDER
+             ===================================================== -->
+
+        <section class="hero" id="home">
+
+
+            <ul class="hero-slider" data-slider>
+
+
+                <!-- ================= SLIDE 1 ================= -->
+
+                <li class="slide active" data-slide>
+
+                    <div class="slide-background">
+
+                        <!--
+                            =================================================
+                            IMAGE HERO 1
+
+                            Crée un dossier :
+
+                            images/
+
+                            puis place ton image dedans.
+
+                            Exemple :
+
+                            images/kings-hero-1.jpg
+
+                            Ensuite modifie :
+
+                            src="images/kings-hero-1.jpg"
+                            =================================================
+                        -->
+
+                        <img src="images/allée kingscorner.jpg"
+                            alt="Kings Corner restaurant"
+                            class="hero-image" style="filter: brightness(75%);">
+
+                    </div>
+
+
+                    <div class="hero-content">
+
+                        <p class="hero-subtitle">
+                            BIENVENUE CHEZ KINGS CORNER
+                        </p>
+
+                        <h1>
+                            Le goût qui<br>
+                            mérite votre attention
+                        </h1>
+
+                        <p class="hero-text">
+                            Découvrez une expérience culinaire unique
+                            au cœur d'Emana, Yaoundé.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a href="#menu" class="btn btn-gold">
+                                Découvrir notre menu
+                            </a>
+
+                            <a href="#reservation" class="btn btn-outline">
+                                Réserver une table
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+                <!-- ================= SLIDE 2 ================= -->
+
+                <li class="slide" data-slide>
+
+                    <div class="slide-background">
+
+                        <!--
+                            IMAGE HERO 2
+
+                            Remplace par ta deuxième photo.
+
+                            Exemple :
+                            images/kings-hero-2.jpg
+                        -->
+
+                        <img src="images/pizza-présentation.jpg"
+                            alt="Plat Kings Corner"
+                            class="hero-image" style="filter: brightness(75%);">
+
+                    </div>
+
+
+                    <div class="hero-content">
+
+                        <p class="hero-subtitle">
+                            SAVEURS & PLAISIR
+                        </p>
+
+                        <h1>
+                            Des plats préparés<br>
+                            avec passion
+                        </h1>
+
+                        <p class="hero-text">
+                            Une cuisine généreuse dans un cadre
+                            chaleureux et convivial.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a href="#menu" class="btn btn-gold">
+                                Voir le menu
+                            </a>
+
+                            <a href="tel:+237670281726" class="btn btn-outline">
+                                Nous appeler
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+
+
+                <!-- ================= SLIDE 3 ================= -->
+
+                <li class="slide" data-slide>
+
+                    <div class="slide-background">
+
+                        <!--
+                            IMAGE HERO 3
+
+                            Exemple :
+                            images/kings-hero-3.jpg
+                        -->
+
+                        <img src="images/table à manger.webp"
+                            alt="Ambiance Kings Corner"
+                            class="hero-image" style="filter: brightness(75%);">
+
+                    </div>
+
+
+                    <div class="hero-content">
+
+                        <p class="hero-subtitle">
+                            VOTRE MOMENT, NOTRE PASSION
+                        </p>
+
+                        <h1>
+                            Mangez bien.<br>
+                            Vivez mieux.
+                        </h1>
+
+                        <p class="hero-text">
+                            Kings' Corner vous accueille à Emana
+                            pour vos repas, sorties et moments spéciaux.
+                        </p>
+
+                        <div class="hero-buttons">
+
+                            <a href="#reservation" class="btn btn-gold">
+                                Réserver
+                            </a>
+
+                            <a href="#contact" class="btn btn-outline">
+                                Nous trouver
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+
+
+            <!-- BOUTONS DU SLIDER -->
+
+            <button class="slider-btn slider-prev" data-prev>
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+
+            <button class="slider-btn slider-next" data-next>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+
+
+
+            <!-- INDICATEURS -->
+
+            <div class="slider-dots">
+
+                <button class="dot active" data-dot="0"></button>
+
+                <button class="dot" data-dot="1"></button>
+
+                <button class="dot" data-dot="2"></button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             INFORMATIONS RAPIDES
+             ===================================================== -->
+
+        <section class="info-bar">
+
+            <div class="info-item">
+
+                <ion-icon name="restaurant-outline"></ion-icon>
+
+                <div>
+
+                    <h3>Cuisine de qualité</h3>
+
+                    <p>
+                        Des plats préparés avec soin.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <ion-icon name="location-outline"></ion-icon>
+
+                <div>
+
+                    <h3>Emana - Yaoundé</h3>
+
+                    <p>
+                        Retrouvez-nous facilement.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <ion-icon name="time-outline"></ion-icon>
+
+                <div>
+
+                    <h3>Ouvert tard</h3>
+
+                    <p>
+                        Jusqu'à 02h00.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <ion-icon name="call-outline"></ion-icon>
+
+                <div>
+
+                    <h3>Réservation</h3>
+
+                    <p>
+                        +237 670 281 726
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             À PROPOS
+             ===================================================== -->
+
+        <section class="section about" id="about">
+
+            <div class="container about-container">
+
+
+                <div class="about-content">
+
+                    <p class="section-subtitle">
+                        À PROPOS DE KINGS CORNER
+                    </p>
+
+                    <h2 class="section-title">
+                        Un endroit où chaque repas devient un moment spécial.
+                    </h2>
+
+                    <p class="section-text">
+
+                        Situé à Emana, Yaoundé, Kings' Corner vous
+                        accueille dans une atmosphère chaleureuse
+                        pour profiter d'une cuisine savoureuse et
+                        d'un moment agréable.
+
+                    </p>
+
+                    <p class="section-text">
+
+                        Que ce soit pour déjeuner, dîner, retrouver
+                        des amis ou simplement passer un bon moment,
+                        notre établissement est pensé pour vous offrir
+                        une expérience conviviale.
+
+                    </p>
+
+
+                    <a href="#reservation" class="btn btn-gold">
+                        Réserver une table
+                    </a>
+
+                </div>
+
+
+
+                <div class="about-images">
+
+
+                    <!--
+                        IMAGE À AJOUTER
+
+                        Exemple :
+                        images/kings-about.jpg
+                    -->
+
+                    <img src="images/nom kingscorner.jpg"
+                        alt="Kings Corner"
+                        class="about-main-image"
+                        data-parallax
+                        data-speed="1">
+
+
+                    <!--
+                        DEUXIÈME IMAGE
+
+                        Exemple :
+                        images/kings-food.jpg
+                    -->
+
+                    <img src="images/pineapple drink.jpg"
+                        alt="Cuisine Kings Corner"
+                        class="about-small-image"
+                        data-parallax
+                        data-speed="1.5">
+
+
+                    <div class="experience-badge">
+
+                        <strong>KINGS</strong>
+
+                        <span>CORNER</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             NOS SPÉCIALITÉS
+             ===================================================== -->
+
+        <section class="section specialties">
+
+            <div class="container">
+
+                <p class="section-subtitle center">
+                    CE QUE NOUS PROPOSONS
+                </p>
+
+                <h2 class="section-title center">
+                    Découvrez notre univers
+                </h2>
+
+
+                <div class="specialty-grid">
+
+
+                    <!-- SPÉCIALITÉ 1 -->
+
+                    <article class="specialty-card">
+
+                        <!--
+                            IMAGE :
+
+                            images/specialite-1.jpg
+                        -->
+
+                        <img src="images/cotes de boeuf.jpg"
+                            alt="Cuisine Kings Corner">
+
+                        <div class="specialty-content">
+
+                            <ion-icon name="restaurant-outline"></ion-icon>
+
+                            <h3>Plats savoureux</h3>
+
+                            <p>
+                                Découvrez notre sélection de plats
+                                préparés avec passion.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SPÉCIALITÉ 2 -->
+
+                    <article class="specialty-card">
+
+                        <!--
+                            IMAGE :
+
+                            images/specialite-2.jpg
+                        -->
+
+                        <img src="images/boisson.jpg"
+                            alt="Boissons Kings Corner" style="margin-top: 50px;">
+
+                        <div class="specialty-content">
+
+                            <ion-icon name="wine-outline"></ion-icon>
+
+                            <h3>Boissons</h3>
+
+                            <p>
+                                Des boissons pour accompagner
+                                parfaitement votre repas.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- SPÉCIALITÉ 3 -->
+
+                    <article class="specialty-card">
+
+                        <!--
+                            IMAGE :
+
+                            images/specialite-3.jpg
+                        -->
+
+                        <img src="images/table à manger.webp"
+                            alt="Ambiance Kings Corner">
+
+                        <div class="specialty-content">
+
+                            <ion-icon name="people-outline"></ion-icon>
+
+                            <h3>Ambiance</h3>
+
+                            <p>
+                                Un cadre agréable pour vos moments
+                                entre amis ou en famille.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PLAT / OFFRE SPÉCIALE
+             ===================================================== -->
+
+        <section class="special-dish">
+
+            <div class="special-image">
+
+                <!--
+                    IMAGE DU PLAT SPÉCIAL
+
+                    images/special-dish.jpg
+                -->
+
+                <img src="images/rizspecial.jpeg"
+                    alt="Spécialité Kings Corner">
+
+            </div>
+
+
+            <div class="special-content">
+
+                <p class="section-subtitle">
+                    À DÉCOUVRIR
+                </p>
+
+                <h2>
+                    Notre spécialité
+                </h2>
+
+                <p>
+                    Découvrez un plat soigneusement préparé
+                    pour vous faire vivre une expérience
+                    pleine de saveurs.
+                </p>
+
+
+                <!--
+                    TU PEUX MODIFIER LE NOM ET LE PRIX
+                    LORSQUE TU AURAS LE VRAI MENU.
+                -->
+
+                <h3>
+                    Spécialité du Chef
+                </h3>
+
+                <p class="price">
+                    Sur demande
+                </p>
+
+
+                <a href="#menu" class="btn btn-gold">
+                    Voir le menu
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MENU
+             ===================================================== -->
+
+        <section class="section menu" id="menu">
+
+            <div class="container">
+
+                <p class="section-subtitle center">
+                    NOTRE CARTE
+                </p>
+
+                <h2 class="section-title center">
+                    Un menu pour tous les goûts
+                </h2>
+
+
+                <div class="menu-grid">
+
+
+                    <!-- PLAT 1 -->
+
+                    <article class="menu-card">
+
+                        <!--
+                            IMAGE DU PLAT
+
+                            images/menu-1.jpg
+                        -->
+
+                        <img src="images/riz Kings.jpg"
+                            alt="Plat Kings Corner">
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Riz Kings'
+                                </h3>
+
+                                <span>
+                                    5.000 XAF
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Riz jasmin , oignons, dés de carotte,haricot vert,
+                                petit pois, maÏs doux, viande hachée, sauce soja. 
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PLAT 2 -->
+
+                    <article class="menu-card">
+
+                        <!--
+                            IMAGE DU PLAT
+
+                            images/menu-2.jpg
+                        -->
+
+                        <img src="images/poulet pané.jpg"
+                            alt="Plat Kings Corner">
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Poulet Pané 1/4,1/2
+                                </h3>
+
+                                <span>
+                                   5.000 | 8.000 XAF
+                                </span>
+                            </div>
+
+                            <p>
+                                Une sélection préparée avec
+                                des ingrédients soigneusement choisis.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PLAT 3 -->
+
+                    <article class="menu-card">
+
+                        <!--
+                            IMAGE DU PLAT
+
+                            images/menu-3.jpg
+                        -->
+
+                        <img src="images/cotes de boeuf.jpg"
+                            alt="Plat Kings Corner">
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Côtes de boeuf
+                                </h3>
+
+                                <span>
+                                    6.500 XAF
+                                </span>
+                            </div>
+
+                            <p>
+                                Une proposition de viande gourmande
+                                à découvrir chez Kings Corner.
+                            </p>
+
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PLAT 4 -->
+
+                    <article class="menu-card">
+
+                        <!--
+                            IMAGE DU PLAT
+
+                            images/menu-4.jpg
+                        -->
+
+                        <img src="images/spaghetti bolognaise.jpg"
+                            alt="Plat Kings Corner">
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    spaghetti Bolognaise
+                                </h3>
+
+                                <span>
+                                    5.000 XAF
+                                </span>
+                                
+                            </div>
+
+                            <p>
+                               Découvrez des pâtes comme vous n'en avez jamais goûté.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PLAT 5 -->
+
+                    <article class="menu-card">
+
+                        <!--
+                            IMAGE DU PLAT
+
+                            images/menu-5.jpg
+                        -->
+
+                        <img src="images/pineapple drink.jpg"
+                            alt="Plat Kings Corner">
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                    Jus Naturel 
+                                </h3>
+
+                                <span>
+                                    1.500 XAF/Verre
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Des boissons pour accompagner
+                                votre repas.
+                            </p>
+
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PLAT 6 -->
+
+                    <article class="menu-card">
+
+                        <!--
+                            IMAGE DU PLAT
+
+                            images/menu-6.jpg
+                        -->
+
+                        <img src="images/Jack-daniels.jfif"
+                            alt="Plat Kings Corner">
+
+                        <div class="menu-card-content">
+
+                            <div class="menu-title">
+
+                                <h3>
+                                   Liqueur 
+                                </h3>
+
+                            </div>
+
+                            <p>
+                                Terminez votre repas avec
+                                un soupçon de sensation forte.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             GALERIE
+             ===================================================== -->
+
+        <section class="section gallery" id="gallery">
+
+            <div class="container">
+
+                <p class="section-subtitle center">
+                    NOTRE UNIVERS
+                </p>
+
+                <h2 class="section-title center">
+                    Découvrez Kings' Corner
+                </h2>
+
+
+                <div class="gallery-grid">
+
+
+                    <!--
+                        =================================================
+                        GALERIE
+
+                        Tu peux remplacer toutes ces images.
+
+                        images/gallery-1.jpg
+                        images/gallery-2.jpg
+                        etc.
+                        =================================================
+                    -->
+
+
+                    <div class="gallery-item large">
+
+                        <img src="images/salon de coiffure homme.webp"
+                            alt="Kings Corner">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img src="images/salonkings.jpg"
+                            alt="Kings Corner">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img src="images/spa.webp"
+                            alt="Kings Corner">
+
+                    </div>
+
+
+                    <div class="gallery-item">
+
+                        <img src="images/Coiffure.webp"
+                            alt="Kings Corner">
+
+                    </div>
+
+
+                    <div class="gallery-item large">
+
+                        <img src="images/kings rinlight.jpg"
+                            alt="Kings Corner">
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             TÉMOIGNAGE
+             ===================================================== -->
+
+        <section class="testimonial">
+
+            <div class="container testimonial-container">
+
+                <span class="quote">
+                    “
+                </span>
+
+                <p>
+                    Votre satisfaction est au cœur de
+                    l'expérience Kings' Corner.
+                </p>
+
+                <div class="testimonial-line"></div>
+
+                <h3>
+                    KINGS' CORNER
+                </h3>
+
+                <span>
+                    Emana - Yaoundé
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RÉSERVATION
+             ===================================================== -->
+
+        <section class="section reservation" id="reservation">
+
+            <div class="container reservation-container">
+
+
+                <div class="reservation-content">
+
+                    <p class="section-subtitle">
+                        RÉSERVATION
+                    </p>
+
+                    <h2 class="section-title">
+                        Réservez votre table
+                    </h2>
+
+                    <p>
+                        Vous souhaitez passer un moment agréable
+                        chez Kings Corner ? Contactez-nous pour
+                        effectuer votre réservation.
+                    </p>
+
+
+                    <a href="tel:+237670281726"
+                        class="btn btn-gold">
+
+                        Appeler maintenant
+
+                    </a>
+
+
+                    <!--
+                        WHATSAPP
+
+                        Le numéro est ici au format international.
+
+                        +237670281726
+
+                        Le lien ouvre WhatsApp directement.
+                    -->
+
+                    <a href="https://wa.me/237670281726"
+                        target="_blank"
+                        class="btn btn-whatsapp">
+
+                        Réserver sur WhatsApp
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- FORMULAIRE -->
+
+                <form class="reservation-form" id="reservationForm">
+
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Votre nom"
+                        required>
+
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Votre numéro"
+                        required>
+
+
+                    <select name="people">
+
+                        <option value="">
+                            Nombre de personnes
+                        </option>
+
+                        <option>1 personne</option>
+                        <option>2 personnes</option>
+                        <option>3 personnes</option>
+                        <option>4 personnes</option>
+                        <option>5 personnes</option>
+                        <option>6 personnes</option>
+                        <option>7 personnes</option>
+                        <option>8 personnes</option>
+                        <option>Plus de 8 personnes</option>
+
+                    </select>
+
+
+                    <input
+                        type="date"
+                        name="date"
+                        required>
+
+
+                    <input
+                        type="time"
+                        name="time"
+                        required>
+
+
+                    <textarea
+                        name="message"
+                        rows="5"
+                        placeholder="Votre message ou demande particulière">
+                    </textarea>
+
+
+                    <button type="submit"
+                        class="btn btn-gold">
+
+                        Envoyer la demande
+
+                    </button>
+
+
+                    <p class="form-message" id="formMessage"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACT
+             ===================================================== -->
+
+        <section class="contact" id="contact">
+
+            <div class="contact-info">
+
+                <p class="section-subtitle">
+                    NOUS TROUVER
+                </p>
+
+                <h2>
+                    Kings' Corner
+                </h2>
+
+                <p>
+                    📍 Emana, Yaoundé, Cameroun
+                </p>
+
+                <p>
+                    📞 +237 670 281 726
+                </p>
+
+                <p>
+                    🕐 Ouvert tous les jours
+                </p>
+
+                <p>
+                    08h00 - 02h00
+                </p>
+
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.482705917899!2d11.5195269!3d3.9202814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bc9323b5ba395%3A0xf0bfdcf4d9419244!2sKings'%20Corner!5e0!3m2!1sfr!2scm!4v1787215137497!5m2!1sfr!2scm" 
+                width="450" height="350" style="border:0;margin: 0;" 
+                allowfullscreen="" loading="lazy" 
+                referrerpolicy="strict-origin-when-cross-origin" class="btn btn-gold">
+
+                      Voir sur Google Maps
+
+                </iframe>
+
+            </div>
+
+
+            <!--
+                =====================================================
+                CARTE
+
+                Si tu veux intégrer une vraie carte Google Maps,
+                tu pourras remplacer cette zone par une iframe.
+                =====================================================
+            -->
+
+            <div class="map-placeholder">
+
+                <ion-icon name="location-outline"></ion-icon>
+
+                <h3>
+                    Kings' Corner
+                </h3>
+
+                <p>
+                    Emana - Yaoundé
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+
+            <div class="footer-brand">
+
+                <a href="#home" class="footer-logo">
+
+                    KINGS' CORNER
+
+                </a>
+
+                <p>
+                    Une expérience culinaire à découvrir
+                    au cœur d'Emana.
+                </p>
+
+                <div class="social-links">
+
+                    <!--
+                        REMPLACE LES "#" PAR LES VRAIS
+                        LIENS DES RÉSEAUX SOCIAUX.
+                    -->
+
+                    <a href="https://www.facebook.com/p/Kings-Corner-61576282675353/" aria-label="Facebook">
+
+                        <ion-icon name="logo-facebook"></ion-icon>
+
+                    </a>
+
+
+                    <a href="https://www.instagram.com/kingscorner.cmr/" aria-label="Instagram">
+
+                        <ion-icon name="logo-instagram"></ion-icon>
+
+                    </a>
+
+
+                    <a href="https://www.tiktok.com/@kingscorner.cmr?_r=1&_d=f5534afgfkmfgb&sec_uid=MS4wLjABAAAAZdWIZJcrDEYCdcTqBcZwOkHBz6YyqbvuH7r4KmkQjURGeG0l3IifMAMG3s5SO_l8&share_author_id=7183651923449988102&sharer_language=fr&source=h5_m&u_code=f553h6bdef3g3c&timestamp=1787214519&user_id=7675038008463377426&sec_user_id=MS4wLjABAAAApQud4KtXN1DIa7A1AAtnrq0jty24VxZHi2Dzy3ibfxxF2q7NJXmtVwUK5lgVxcFs&item_author_type=2&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7675016296530741013&share_link_id=3fb10550-646d-4381-9d5a-8c7aa48d2aaf&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b6880%2Cb5836&social_share_type=5&share_enter_from=others_homepage&item_author_type=2&enable_checksum=1" aria-label="TikTok">
+
+                        <ion-icon name="logo-tiktok"></ion-icon>
+
+                    </a>
+
+
+                    <a href="https://wa.me/237670281726"
+                        aria-label="WhatsApp">
+
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Navigation
+                </h3>
+
+                <a href="#home">Accueil</a>
+
+                <a href="#about">À propos</a>
+
+                <a href="#menu">Menu</a>
+
+                <a href="#gallery">Galerie</a>
+
+                <a href="#reservation">Réservation</a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="tel:+237670281726">
+                    +237 670 281 726
+                </a>
+
+                <span>
+                    Emana, Yaoundé
+                </span>
+
+                <span>
+                    Cameroun
+                </span>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Horaires
+                </h3>
+
+                <span>
+                    Lundi - Vendredi
+                </span>
+
+                <strong>
+                    08h00 - 02h00
+                </strong>
+
+                <span>
+                    Samedi - Dimanche
+                </span>
+
+                <strong>
+                    09h00 - 02h00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Kings' Corner. Tous droits réservés.
+            </p>
+
+            <p>
+                Site réalisé par <strong>Thaddée Isaac Boyoguéno</strong>
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         BOUTON RETOUR EN HAUT
+         ===================================================== -->
+
+    <a href="#top"
+        class="back-top"
+        data-back-top>
+
+        <ion-icon name="chevron-up-outline"></ion-icon>
+
+    </a>
+
+
+
+    <!-- Notre JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

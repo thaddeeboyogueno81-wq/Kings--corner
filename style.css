@@ -1,0 +1,2425 @@
+/* =========================================================
+   KINGS CORNER
+   STYLE.CSS
+
+   Design :
+   - Noir
+   - Doré
+   - Blanc
+   - Style restaurant premium
+
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+
+    --gold: #d4af37;
+    --gold-light: #f0cf63;
+    --gold-dark: #9f7d15;
+
+    --black: #0b0b0b;
+    --dark: #111111;
+    --dark-2: #181818;
+    --dark-3: #222222;
+
+    --white: #ffffff;
+    --grey: #aaaaaa;
+    --grey-dark: #777777;
+
+    --font-title: "Forum", serif;
+    --font-body: "DM Sans", sans-serif;
+
+    --transition: 0.35s ease;
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-family: var(--font-body);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+}
+
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+img {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button,
+input,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+.container {
+
+    width: min(1200px, 90%);
+
+    margin-inline: auto;
+
+}
+
+
+/* =========================================================
+   PRELOADER
+   ========================================================= */
+
+.preloader {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: var(--black);
+
+    z-index: 9999;
+
+    display: grid;
+
+    place-content: center;
+
+    gap: 20px;
+
+    transition: 0.6s ease;
+
+}
+
+
+.preloader.loaded {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+.preloader p {
+
+    text-align: center;
+
+    color: var(--gold);
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+}
+
+
+.loader-circle {
+
+    width: 55px;
+
+    height: 55px;
+
+    border: 3px solid #333;
+
+    border-top-color: var(--gold);
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+    margin-left: 40px;
+
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.topbar {
+
+    background: #080808;
+
+    border-bottom: 1px solid #242424;
+
+    font-size: 13px;
+
+}
+
+
+.topbar-container {
+
+    min-height: 42px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.topbar-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #bbb;
+
+}
+
+
+.topbar-item ion-icon {
+
+    color: var(--gold);
+
+    font-size: 17px;
+
+}
+
+
+.topbar-item:hover {
+
+    color: var(--gold);
+
+}
+
+
+.topbar-separator {
+
+    width: 1px;
+
+    height: 15px;
+
+    background: #444;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+
+    position: fixed;
+
+    top: 42px;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    transition: var(--transition);
+
+}
+
+
+.header.active {
+
+    top: 0;
+
+    background: rgba(10, 10, 10, 0.96);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+
+.header.hide {
+
+    transform: translateY(-100%);
+
+}
+
+
+.header-container {
+
+    min-height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 0.85;
+
+}
+
+
+.logo-kings {
+
+    color: var(--gold);
+
+    font-family: var(--font-title);
+
+    font-size: 28px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.logo-corner {
+
+    font-size: 10px;
+
+    letter-spacing: 7px;
+
+    color: white;
+
+    margin-left: 4px;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar-list {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+.navbar-link {
+
+    position: relative;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: var(--transition);
+
+}
+
+
+.navbar-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -8px;
+
+    left: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: var(--transition);
+
+}
+
+
+.navbar-link:hover,
+.navbar-link.active {
+
+    color: var(--gold);
+
+}
+
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+
+    width: 100%;
+
+}
+
+
+.mobile-info,
+.close-menu {
+
+    display: none;
+
+}
+
+
+/* =========================================================
+   BOUTONS
+   ========================================================= */
+
+.btn {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 48px;
+
+    padding: 0 28px;
+
+    border: 1px solid transparent;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+
+.btn-gold {
+
+    background: var(--gold);
+
+    color: var(--black);
+
+}
+
+
+.btn-gold:hover {
+
+    background: var(--gold-light);
+
+    transform: translateY(-3px);
+
+}
+
+
+.btn-outline {
+
+    border-color: white;
+
+    color: white;
+
+}
+
+
+.btn-outline:hover {
+
+    background: white;
+
+    color: black;
+
+}
+
+
+.btn-whatsapp {
+
+    background: #25d366;
+
+    color: white;
+
+}
+
+
+.btn-whatsapp:hover {
+
+    background: #1da851;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    border: 0;
+
+}
+
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 28px;
+
+    height: 2px;
+
+    background: white;
+
+    margin: 6px;
+
+    transition: var(--transition);
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+    height: 100vh;
+
+    min-height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.hero-slider {
+
+    height: 100%;
+
+}
+
+
+.slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: opacity 1s ease;
+
+}
+
+
+.slide.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.slide-background {
+
+    position: absolute;
+
+    inset: 0;
+
+}
+
+
+.hero-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.05);
+
+    transition: transform 8s ease;
+
+}
+
+
+.slide.active .hero-image {
+
+    transform: scale(1);
+
+}
+
+
+.slide-background::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.8),
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.7)
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    height: 100%;
+
+    width: min(900px, 90%);
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.hero-subtitle {
+
+    color: var(--gold);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero-content h1 {
+
+    font-family: var(--font-title);
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-text {
+
+    color: #ddd;
+
+    max-width: 650px;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   SLIDER BUTTONS
+   ========================================================= */
+
+.slider-btn {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 5;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    background: rgba(0,0,0,0.3);
+
+    color: white;
+
+    font-size: 22px;
+
+    transition: var(--transition);
+
+}
+
+
+.slider-btn:hover {
+
+    background: var(--gold);
+
+    color: black;
+
+    border-color: var(--gold);
+
+}
+
+
+.slider-prev {
+
+    left: 30px;
+
+}
+
+
+.slider-next {
+
+    right: 30px;
+
+}
+
+
+/* =========================================================
+   SLIDER DOTS
+   ========================================================= */
+
+.slider-dots {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.dot {
+
+    width: 35px;
+
+    height: 3px;
+
+    border: 0;
+
+    background: rgba(255,255,255,0.4);
+
+}
+
+
+.dot.active {
+
+    background: var(--gold);
+
+}
+
+
+/* =========================================================
+   INFO BAR
+   ========================================================= */
+
+.info-bar {
+
+    background: var(--dark-2);
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-bottom: 1px solid #292929;
+
+}
+
+
+.info-item {
+
+    padding: 30px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    border-right: 1px solid #292929;
+
+}
+
+
+.info-item ion-icon {
+
+    color: var(--gold);
+
+    font-size: 30px;
+
+}
+
+
+.info-item h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.info-item p {
+
+    color: var(--grey);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+
+    padding: 110px 0;
+
+}
+
+
+.section-subtitle {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-title {
+
+    font-family: var(--font-title);
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    margin-bottom: 25px;
+
+}
+
+
+.center {
+
+    text-align: center;
+
+}
+
+
+.section-text {
+
+    color: var(--grey);
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+
+    background: var(--black);
+
+}
+
+
+.about-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+.about-content {
+
+    max-width: 550px;
+
+}
+
+
+.about-images {
+
+    position: relative;
+
+    min-height: 550px;
+
+}
+
+
+.about-main-image {
+
+    width: 80%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    margin-left: auto;
+
+}
+
+
+.about-small-image {
+
+    position: absolute;
+
+    width: 45%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    left: 0;
+
+    bottom: 0;
+
+    border: 10px solid var(--black);
+
+}
+
+
+.experience-badge {
+
+    position: absolute;
+
+    top: 30px;
+
+    left: 30px;
+
+    width: 130px;
+
+    height: 130px;
+
+    border: 1px solid var(--gold);
+
+    background: var(--black);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform: rotate(-10deg);
+
+}
+
+
+.experience-badge strong {
+
+    font-family: var(--font-title);
+
+    color: var(--gold);
+
+    font-size: 22px;
+
+}
+
+
+.experience-badge span {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =========================================================
+   SPÉCIALITÉS
+   ========================================================= */
+
+.specialties {
+
+    background: var(--dark-2);
+
+}
+
+
+.specialty-grid {
+
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.specialty-card {
+
+    position: relative;
+
+    height: 450px;
+
+    overflow: hidden;
+
+}
+
+
+.specialty-card img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+.specialty-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+.specialty-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 20%,
+        rgba(0,0,0,0.9)
+    );
+
+}
+
+
+.specialty-content {
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 30px;
+
+    left: 30px;
+
+    right: 30px;
+
+}
+
+
+.specialty-content ion-icon {
+
+    color: var(--gold);
+
+    font-size: 30px;
+
+}
+
+
+.specialty-content h3 {
+
+    font-family: var(--font-title);
+
+    font-size: 30px;
+
+    margin: 10px 0;
+
+}
+
+
+.specialty-content p {
+
+    color: #ccc;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   SPECIAL DISH
+   ========================================================= */
+
+.special-dish {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 600px;
+
+}
+
+
+.special-image {
+
+    overflow: hidden;
+
+}
+
+
+.special-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.special-content {
+
+    padding: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #151515;
+
+}
+
+
+.special-content h2 {
+
+    font-family: var(--font-title);
+
+    font-size: 65px;
+
+    font-weight: 400;
+
+    margin-bottom: 25px;
+
+}
+
+
+.special-content p {
+
+    color: var(--grey);
+
+    max-width: 500px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.special-content h3 {
+
+    color: var(--gold);
+
+    font-family: var(--font-title);
+
+    font-size: 28px;
+
+}
+
+
+.price {
+
+    font-size: 20px;
+
+    color: white !important;
+
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.menu {
+
+    background: var(--black);
+
+}
+
+
+.menu-grid {
+
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.menu-card {
+
+    display: grid;
+
+    grid-template-columns: 120px 1fr;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    border-bottom: 1px solid #333;
+
+    transition: var(--transition);
+
+}
+
+
+.menu-card:hover {
+
+    background: #151515;
+
+}
+
+
+.menu-card > img {
+
+    width: 120px;
+
+    height: 120px;
+
+    object-fit: cover;
+
+}
+
+
+.menu-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom: 1px dashed #444;
+
+    padding-bottom: 8px;
+
+}
+
+
+.menu-title h3 {
+
+    font-family: var(--font-title);
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+}
+
+
+.menu-title span {
+
+    color: var(--gold);
+
+    white-space: nowrap;
+
+}
+
+
+.menu-card-content p {
+
+    color: var(--grey);
+
+    font-size: 13px;
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================================
+   GALERIE
+   ========================================================= */
+
+.gallery {
+
+    background: var(--dark-2);
+
+}
+
+
+.gallery-grid {
+
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-auto-rows: 250px;
+
+    gap: 15px;
+
+}
+
+
+.gallery-item {
+
+    overflow: hidden;
+
+}
+
+
+.gallery-item.large {
+
+    grid-column: span 2;
+
+}
+
+
+.gallery-item img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   TESTIMONIAL
+   ========================================================= */
+
+.testimonial {
+
+    padding: 120px 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.8),
+            rgba(0,0,0,0.9)
+        ),
+        url("images/testimonial-bg.jpg") center/cover;
+
+    /*
+
+        =====================================================
+        IMAGE DE FOND
+
+        Mets ton image ici :
+
+        images/testimonial-bg.jpg
+
+        =====================================================
+
+    */
+
+}
+
+
+.testimonial-container {
+
+    text-align: center;
+
+    max-width: 850px;
+
+}
+
+
+.quote {
+
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+
+    font-size: 90px;
+
+    line-height: 0.5;
+
+}
+
+
+.testimonial p {
+
+    font-family: var(--font-title);
+
+    font-size: clamp(30px, 4vw, 50px);
+
+    line-height: 1.2;
+
+    margin: 30px 0;
+
+}
+
+
+.testimonial-line {
+
+    width: 50px;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    margin: 30px auto;
+
+}
+
+
+.testimonial h3 {
+
+    color: var(--gold);
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   RÉSERVATION
+   ========================================================= */
+
+.reservation {
+
+    background: #151515;
+
+}
+
+
+.reservation-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.reservation-content p:not(.section-subtitle) {
+
+    color: var(--grey);
+
+    margin-bottom: 25px;
+
+}
+
+
+.reservation-form {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+}
+
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+
+    width: 100%;
+
+    border: 1px solid #3a3a3a;
+
+    background: #0d0d0d;
+
+    color: white;
+
+    padding: 15px;
+
+    outline: none;
+
+}
+
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+.reservation-form textarea {
+
+    grid-column: span 2;
+
+    resize: vertical;
+
+}
+
+
+.reservation-form button {
+
+    border: 0;
+
+}
+
+
+.form-message {
+
+    grid-column: span 2;
+
+    color: var(--gold);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 500px;
+
+}
+
+
+.contact-info {
+
+    padding: 80px 10%;
+
+    background: var(--dark);
+
+}
+
+
+.contact-info h2 {
+
+    font-family: var(--font-title);
+
+    font-size: 60px;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+
+}
+
+
+.contact-info p {
+
+    color: var(--grey);
+
+    margin: 12px 0;
+
+}
+
+
+.map-placeholder {
+
+    min-height: 500px;
+
+    background: #202020;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.map-placeholder ion-icon {
+
+    font-size: 70px;
+
+    color: var(--gold);
+
+}
+
+
+.map-placeholder h3 {
+
+    font-family: var(--font-title);
+
+    font-size: 40px;
+
+    margin-top: 15px;
+
+}
+
+
+.map-placeholder p {
+
+    color: var(--grey);
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+
+    background: #070707;
+
+    padding-top: 80px;
+
+}
+
+
+.footer-container {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 60px;
+
+}
+
+
+.footer-logo {
+
+    color: var(--gold);
+
+    font-family: var(--font-title);
+
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.footer-brand p {
+
+    color: var(--grey);
+
+    max-width: 350px;
+
+    margin: 20px 0;
+
+}
+
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.footer-column h3 {
+
+    color: var(--gold);
+
+    margin-bottom: 10px;
+
+}
+
+
+.footer-column a,
+.footer-column span {
+
+    color: var(--grey);
+
+    font-size: 14px;
+
+}
+
+
+.footer-column a:hover {
+
+    color: var(--gold);
+
+}
+
+
+.social-links {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.social-links a {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid #444;
+
+    display: grid;
+
+    place-items: center;
+
+    transition: var(--transition);
+
+}
+
+
+.social-links a:hover {
+
+    border-color: var(--gold);
+
+    color: var(--gold);
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid #222;
+
+    padding: 20px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #666;
+
+    font-size: 12px;
+
+}
+
+
+.footer-bottom strong {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+.back-top {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 45px;
+
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--gold);
+
+    color: black;
+
+    z-index: 500;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: var(--transition);
+
+}
+
+
+.back-top.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLETTE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+
+    .navbar-list {
+
+        gap: 18px;
+
+    }
+
+
+    .desktop-booking {
+
+        display: none;
+
+    }
+
+
+    .info-bar {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .about-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .about-content {
+
+        max-width: 100%;
+
+    }
+
+
+    .specialty-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .special-dish {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .special-image {
+
+        height: 500px;
+
+    }
+
+
+    .menu-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+
+    .topbar {
+
+        display: none;
+
+    }
+
+
+    .header {
+
+        top: 0;
+
+    }
+
+
+    .header-container {
+
+        min-height: 75px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .navbar {
+
+        position: fixed;
+
+        top: 0;
+
+        right: -100%;
+
+        width: 80%;
+
+        max-width: 350px;
+
+        height: 100vh;
+
+        background: #111;
+
+        padding: 90px 30px 30px;
+
+        transition: 0.4s ease;
+
+        z-index: 1002;
+
+    }
+
+
+    .navbar.active {
+
+        right: 0;
+
+    }
+
+
+    .navbar-list {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+    }
+
+
+    .navbar-link {
+
+        font-size: 16px;
+
+    }
+
+
+    .close-menu {
+
+        display: block;
+
+        position: absolute;
+
+        top: 25px;
+
+        right: 25px;
+
+        background: transparent;
+
+        border: 0;
+
+        color: white;
+
+        font-size: 30px;
+
+    }
+
+
+    .mobile-info {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 50px;
+
+        padding-top: 30px;
+
+        border-top: 1px solid #333;
+
+        color: var(--grey);
+
+        font-size: 13px;
+
+    }
+
+
+    .mobile-info a {
+
+        color: var(--gold);
+
+    }
+
+
+    .overlay {
+
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(0,0,0,0.7);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition: 0.3s;
+
+        z-index: 1001;
+
+    }
+
+
+    .overlay.active {
+
+        opacity: 1;
+
+        visibility: visible;
+
+    }
+
+
+    .hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    .hero-text {
+
+        font-size: 14px;
+
+    }
+
+
+    .slider-btn {
+
+        display: none;
+
+    }
+
+
+    .info-bar {
+
+        grid-template-columns: 1fr;
+
+    }
+    iframe {
+        width: 90%;
+        height: 45%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info-item {
+
+        border-right: 0;
+
+        border-bottom: 1px solid #292929;
+
+        justify-content: flex-start;
+
+        padding-left: 10%;
+
+    }
+
+
+    .section {
+
+        padding: 80px 0;
+
+    }
+
+
+    .about-images {
+
+        min-height: 400px;
+
+    }
+
+
+    .about-main-image {
+
+        height: 380px;
+
+    }
+
+
+    .about-small-image {
+
+        height: 180px;
+
+    }
+
+
+    .specialty-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .specialty-card {
+
+        height: 400px;
+
+    }
+
+
+    .special-content {
+
+        padding: 50px 8%;
+
+    }
+
+
+    .special-content h2 {
+
+        font-size: 48px;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-auto-rows: 180px;
+
+    }
+
+
+    .gallery-item.large {
+
+        grid-column: span 2;
+
+    }
+
+
+    .reservation-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .reservation-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .reservation-form textarea,
+    .form-message {
+
+        grid-column: span 1;
+
+    }
+
+
+    .contact {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .contact-info {
+
+        padding: 70px 8%;
+
+    }
+
+
+    .map-placeholder {
+
+        min-height: 350px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   PETITS TÉLÉPHONES
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+
+    .logo-kings {
+
+        font-size: 23px;
+
+    }
+
+
+    .logo-corner {
+
+        font-size: 8px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+
+    .menu-card {
+
+        grid-template-columns: 85px 1fr;
+
+    }
+
+
+    .menu-card > img {
+
+        width: 85px;
+
+        height: 85px;
+
+    }
+
+
+    .menu-title {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .contact-info h2 {
+
+        font-size: 45px;
+
+    }
+
+}
