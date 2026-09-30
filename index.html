@@ -246,6 +246,13 @@
 
 
 
+            <!-- THÈME CLAIR / SOMBRE -->
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Activer le mode clair" aria-pressed="false">
+                <ion-icon name="sunny-outline" class="theme-icon-light"></ion-icon>
+                <ion-icon name="moon-outline" class="theme-icon-dark"></ion-icon>
+                <span class="theme-label">Thème</span>
+            </button>
+
             <!-- BOUTON RÉSERVER -->
 
             <a href="#reservation" class="btn btn-gold desktop-booking">
@@ -1267,22 +1274,32 @@
 
                 <form class="reservation-form" id="reservationForm">
 
+                    <div class="field-group">
+                        <label for="reservation-name">Nom / pseudo</label>
+                        <input
+                            id="reservation-name"
+                            type="text"
+                            name="name"
+                            placeholder="Ex. Thaddée"
+                            autocomplete="name"
+                            required>
+                    </div>
 
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Votre nom"
-                        required>
+                    <div class="field-group">
+                        <label for="reservation-phone">Numéro de téléphone</label>
+                        <input
+                            id="reservation-phone"
+                            type="tel"
+                            name="phone"
+                            placeholder="+237 6XX XXX XXX"
+                            autocomplete="tel"
+                            required>
+                    </div>
 
 
-                    <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Votre numéro"
-                        required>
-
-
-                    <select name="people">
+                    <div class="field-group">
+                        <label for="reservation-people">Nombre de personnes</label>
+                        <select id="reservation-people" name="people">
 
                         <option value="">
                             Nombre de personnes
@@ -1297,29 +1314,38 @@
                         <option>7 personnes</option>
                         <option>8 personnes</option>
                         <option>Plus de 8 personnes</option>
-
-                    </select>
-
-
-                    <input
-                        type="date"
-                        name="date"
-                        placeholder="date de réservation"
-                        required>
+                        </select>
+                    </div>
 
 
-                    <input
-                        type="time"
-                        name="time"
-                        placeholder="heure de réservation"
-                        required>
+                    <div class="field-group">
+                        <label for="reservation-date">Date de réservation</label>
+                        <input
+                            id="reservation-date"
+                            type="date"
+                            name="date"
+                            required>
+                    </div>
 
 
-                    <textarea
-                        name="message"
-                        rows="5"
-                        placeholder="Votre message ou demande particulière">
-                    </textarea>
+                    <div class="field-group">
+                        <label for="reservation-time">Heure de réservation</label>
+                        <input
+                            id="reservation-time"
+                            type="time"
+                            name="time"
+                            required>
+                    </div>
+
+
+                    <div class="field-group field-group-full">
+                        <label for="reservation-message">Message</label>
+                        <textarea
+                            id="reservation-message"
+                            name="message"
+                            rows="5"
+                            placeholder="Votre message ou demande particulière"></textarea>
+                    </div>
 
 
                     <button type="submit"
