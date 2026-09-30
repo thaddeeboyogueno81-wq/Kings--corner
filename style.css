@@ -2423,3 +2423,305 @@ ul {
     }
 
 }
+
+/* =========================================================
+   KINGS CORNER — MODERN THEME SYSTEM
+   ========================================================= */
+
+:root {
+    --accent: #ffb703;
+    --accent-2: #fb8500;
+    --page: #fffaf3;
+    --surface: #ffffff;
+    --surface-soft: #fff3df;
+    --text: #202124;
+    --muted: #5f6368;
+    --border: rgba(32, 33, 36, 0.12);
+    --shadow-soft: 0 14px 40px rgba(70, 45, 10, 0.10);
+}
+
+body.light-theme {
+    background: var(--page);
+    color: var(--text);
+}
+
+body.light-theme .topbar {
+    background: #fff7e9;
+    border-bottom-color: rgba(251, 133, 0, 0.16);
+}
+
+body.light-theme .topbar-item {
+    color: #5f6368;
+}
+
+body.light-theme .header.active {
+    background: rgba(255, 250, 243, 0.94);
+    box-shadow: 0 10px 30px rgba(70, 45, 10, 0.10);
+}
+
+body.light-theme .logo-corner,
+body.light-theme .navbar-link {
+    color: #252525;
+}
+
+body.light-theme .navbar-link:hover,
+body.light-theme .navbar-link.active {
+    color: var(--accent-2);
+}
+
+body.light-theme .menu-toggle span {
+    background: #202124;
+}
+
+body.light-theme .btn-outline {
+    border-color: #202124;
+    color: #202124;
+}
+
+body.light-theme .btn-outline:hover {
+    background: #202124;
+    color: #fff;
+}
+
+body.light-theme .info-bar,
+body.light-theme .specialties,
+body.light-theme .gallery {
+    background: var(--surface-soft);
+    border-color: var(--border);
+}
+
+body.light-theme .about,
+body.light-theme .menu {
+    background: var(--page);
+}
+
+body.light-theme .special-content,
+body.light-theme .reservation,
+body.light-theme .contact-info {
+    background: var(--surface);
+}
+
+body.light-theme .section-text,
+body.light-theme .info-item p,
+body.light-theme .special-content p,
+body.light-theme .menu-card-content p,
+body.light-theme .contact-info p,
+body.light-theme .footer-brand p,
+body.light-theme .footer-column a,
+body.light-theme .footer-column span {
+    color: var(--muted);
+}
+
+body.light-theme .menu-card:hover {
+    background: #fff1d6;
+}
+
+body.light-theme .menu-card,
+body.light-theme .menu-title {
+    border-color: var(--border);
+}
+
+body.light-theme .about-small-image {
+    border-color: var(--page);
+}
+
+body.light-theme .experience-badge {
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+}
+
+body.light-theme .reservation-form input,
+body.light-theme .reservation-form select,
+body.light-theme .reservation-form textarea {
+    background: #fff;
+    color: #202124;
+    border-color: #d8d2c8;
+}
+
+body.light-theme .reservation-form input::placeholder,
+body.light-theme .reservation-form textarea::placeholder {
+    color: #747474;
+    opacity: 1;
+}
+
+body.light-theme .reservation-form select {
+    color: #202124;
+}
+
+body.light-theme .footer {
+    background: #1b1712;
+}
+
+body.light-theme .footer-column a:hover {
+    color: var(--accent);
+}
+
+body.light-theme .navbar {
+    background: #fffaf3;
+}
+
+body.light-theme .navbar-link,
+body.light-theme .close-menu {
+    color: #202124;
+}
+
+body.light-theme .mobile-info {
+    color: var(--muted);
+    border-color: var(--border);
+}
+
+body.light-theme .map-placeholder {
+    background: #eee5d7;
+    color: #202124;
+}
+
+body.light-theme .map-placeholder p {
+    color: var(--muted);
+}
+
+body.light-theme .preloader {
+    background: var(--page);
+}
+
+body.light-theme .preloader p {
+    color: var(--accent-2);
+}
+
+body.light-theme .loader-circle {
+    border-color: #e4d9c8;
+    border-top-color: var(--accent-2);
+}
+
+/* Bouton de thème */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 42px;
+    padding: 0 13px;
+    border: 1px solid rgba(255, 183, 3, 0.45);
+    border-radius: 999px;
+    background: rgba(255, 183, 3, 0.10);
+    color: var(--gold-light);
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    background: var(--accent);
+    color: #1b1712;
+    transform: translateY(-2px);
+}
+
+.theme-toggle ion-icon {
+    font-size: 18px;
+}
+
+.theme-icon-dark {
+    display: none;
+}
+
+body.light-theme .theme-toggle {
+    color: #9a5a00;
+    background: #fff0d0;
+    border-color: rgba(154, 90, 0, 0.25);
+}
+
+body.light-theme .theme-toggle:hover {
+    color: #fff;
+    background: var(--accent-2);
+}
+
+body.light-theme .theme-icon-light {
+    display: none;
+}
+
+body.light-theme .theme-icon-dark {
+    display: block;
+}
+
+/* Champs de réservation : libellés toujours visibles */
+.reservation-form .field-group {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.reservation-form .field-group-full {
+    grid-column: span 2;
+}
+
+.reservation-form .field-group label {
+    color: #f2f2f2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+body.light-theme .reservation-form .field-group label {
+    color: #303030;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    min-height: 52px;
+    border-radius: 10px;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.reservation-form textarea {
+    min-height: 125px;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.14);
+}
+
+.reservation-form input::placeholder,
+.reservation-form textarea::placeholder {
+    color: #a9a9a9;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        min-height: 40px;
+        width: 42px;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    .theme-toggle .theme-label {
+        display: none;
+    }
+
+    .reservation-form .field-group,
+    .reservation-form .field-group-full {
+        grid-column: span 1;
+    }
+
+    .reservation-form .field-group label {
+        font-size: 13px;
+    }
+
+    .reservation-form input,
+    .reservation-form select,
+    .reservation-form textarea {
+        font-size: 16px;
+        min-height: 54px;
+        padding: 14px 15px;
+    }
+
+    .reservation-form textarea {
+        min-height: 130px;
+    }
+
+    body.light-theme .navbar {
+        box-shadow: -15px 0 40px rgba(50, 35, 15, 0.12);
+    }
+}
