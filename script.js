@@ -593,3 +593,56 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
+/* =========================================================
+   KINGS CORNER — THEME TOGGLE
+   ========================================================= */
+
+const themeToggle = document.querySelector("#themeToggle");
+
+function applyTheme(theme) {
+    const isLight = theme === "light";
+
+    document.body.classList.toggle("light-theme", isLight);
+
+    if (themeToggle) {
+        themeToggle.setAttribute("aria-pressed", String(isLight));
+        themeToggle.setAttribute(
+            "aria-label",
+            isLight ? "Activer le mode sombre" : "Activer le mode clair"
+        );
+    }
+}
+
+if (themeToggle) {
+    const savedTheme = localStorage.getItem("kings-theme");
+
+    if (savedTheme === "light" || savedTheme === "dark") {
+        applyTheme(savedTheme);
+    } else {
+        applyTheme(
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark"
+        );
+    }
+
+    themeToggle.addEventListener("click", () => {
+        const nextTheme = document.body.classList.contains("light-theme")
+            ? "dark"
+            : "light";
+
+        applyTheme(nextTheme);
+        localStorage.setItem("kings-theme", nextTheme);
+    });
+}
+
+/* Le menu mobile se ferme aussi avec la touche Échap. */
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navbar && navbar.classList.contains("active")) {
+        navbar.classList.remove("active");
+        overlay?.classList.remove("active");
+        document.body.classList.remove("menu-open");
+    }
+});
